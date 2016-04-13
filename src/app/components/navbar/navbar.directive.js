@@ -4,9 +4,7 @@ export function NavbarDirective() {
   let directive = {
     restrict: 'E',
     templateUrl: 'app/components/navbar/navbar.html',
-    scope: {
-        creationDate: '='
-    },
+    scope: {},
     controller: NavbarController,
     controllerAs: 'vm',
     bindToController: true
@@ -16,10 +14,13 @@ export function NavbarDirective() {
 }
 
 class NavbarController {
-  constructor (moment) {
+  constructor ($state) {
     'ngInject';
 
-    // "this.creation" is available by directive option "bindToController: true"
-    this.relativeDate = moment(this.creationDate).fromNow();
+    this.$state = $state;
+  }
+
+  isActive(state) {
+    return this.$state.includes(state);
   }
 }
