@@ -7,7 +7,7 @@ import { Henchmen } from '../app/components/henchmen/henchmen.service';
 import { MainController } from './main/main.controller';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 
-angular.module('batcave', ['ui.router', 'ui.bootstrap', 'toastr'])
+angular.module('starfleet', ['ui.router', 'ui.bootstrap', 'toastr'])
   .constant('moment', moment)
   .config(config)
   .config(routerConfig)

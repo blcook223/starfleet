@@ -1,5 +1,5 @@
 {
-  "name": "batcave",
+  "name": "starfleet",
   "version": "0.0.0",
   "dependencies": {
     "angular-ui-router": "~0.2.15",
