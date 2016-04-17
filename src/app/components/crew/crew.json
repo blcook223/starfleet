@@ -1,82 +1,26 @@
 [
     {
         "id": 0,
-        "firstName": "Ona",
-        "lastName": "Philips",
-        "rank": "Commander",
+        "firstName": "Foo",
+        "lastName": "Bar",
+        "rank": "asdfa",
         "post": "USS Enterprise",
-        "race": "Klingon"
+        "race": "Human"
     },
     {
         "id": 1,
-        "firstName": "Claudio",
-        "lastName": "Bickmore",
-        "rank": "Captain",
-        "post": "Deep Space 9",
+        "firstName": "Foo",
+        "lastName": "Bar",
+        "rank": "asdfagsda",
+        "post": "USS Enterprise",
         "race": "Klingon"
     },
     {
         "id": 2,
-        "firstName": "Earline",
-        "lastName": "Bhide",
-        "rank": "Ensign",
-        "post": "USS Defiant",
+        "firstName": "Foo",
+        "lastName": "Bar",
+        "rank": "asagsdadfa",
+        "post": "USS Enterprise",
         "race": "Vulcan"
-    },
-    {
-        "id": 3,
-        "firstName": "Harriet",
-        "lastName": "Chiogna",
-        "rank": "Commander",
-        "post": "Deep Space 9",
-        "race": "Human"
-    },
-    {
-        "id": 4,
-        "firstName": "Denice",
-        "lastName": "Wegman",
-        "rank": "Captain",
-        "post": "USS Enterprise",
-        "race": "Klingon"
-    },
-    {
-        "id": 5,
-        "firstName": "Esther",
-        "lastName": "Stanton",
-        "rank": "Ensign",
-        "post": "USS Defiant",
-        "race": "Human"
-    },
-    {
-        "id": 6,
-        "firstName": "Lottie",
-        "lastName": "Dongoski",
-        "rank": "Commander",
-        "post": "USS Enterprise",
-        "race": "Human"
-    },
-    {
-        "id": 7,
-        "firstName": "Judie",
-        "lastName": "Rhoades",
-        "rank": "Ensign",
-        "post": "Deep Space 9",
-        "race": "Klingon"
-    },
-    {
-        "id": 8,
-        "firstName": "Cordell",
-        "lastName": "Lubin",
-        "rank": "Commander",
-        "post": "USS Enterprise",
-        "race": "Human"
-    },
-    {
-        "id": 9,
-        "firstName": "Franchesca",
-        "lastName": "Schickele",
-        "rank": "Lieutenant",
-        "post": "USS Enterprise",
-        "race": "Human"
     }
 ]
