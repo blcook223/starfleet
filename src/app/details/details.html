@@ -1,1 +1,22 @@
-<div>{{vm.crewMember}}</div>
+<div class="container">
+
+  <sf-navbar></sf-navbar>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{vm.crewMember.firstName}} {{vm.crewMember.lastName}}</h1>
+      <dl>
+        <dt>First Name:</dt>
+        <dd>{{vm.crewMember.firstName}}</dd>
+        <dt>Last Name:</dt>
+        <dd>{{vm.crewMember.lastName}}</dd>
+        <dt>Rank:</dt>
+        <dd>{{vm.crewMember.rank}}</dd>
+        <dt>Post:</dt>
+        <dd>{{vm.crewMember.post}}</dd>
+        <dt>Race:</dt>
+        <dd>{{vm.crewMember.race}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

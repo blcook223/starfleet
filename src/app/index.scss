@@ -21,3 +21,11 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 .table th {
   cursor: pointer;
 }
+
+dt,
+dd {
+  float: left;
+}
+dt {
+  clear: both;
+}
