@@ -1,0 +1,11 @@
+[
+    "{% repeat 10 %}",
+    {
+        "id": "{% index %}",
+        "firstName": "{% first_name %}",
+        "lastName": "{% last_name %}",
+        "rank": ["{% random %}", "Ensign", "Lieutenant", "Commander", "Captain"],
+        "post": ["{% random %}", "USS Enterprise", "Deep Space 9", "USS Defiant"],
+        "race": ["{% random %}", "Human", "Klingon", "Vulcan"]
+    }
+]

@@ -1,18 +1,71 @@
 <div class="container">
 
-  <div>
-    <acme-navbar></acme-navbar>
-  </div>
+  <sf-navbar></sf-navbar>
 
-  <div class="jumbotron text-center">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-  </div>
+  <form class="form-inline">
+    <label class="control-label">Filter results:</label>
+    <div class="form-group">
+      <label class="control-label sr-only" for="nameFilter{{::$id}}">Filter by name</label>
+      <input id="nameFilter{{::$id}}" placeholder="Name" ng-model="vm.filterName" type="text">
+    </div>
+    <div class="form-group">
+      <label class="control-label sr-only" for="rankFilter{{::$id}}">Filter by rank</label>
+      <input id="rankFilter{{::$id}}" placeholder="Rank" ng-model="vm.filterRank" type="text">
+    </div>
+    <div class="form-group">
+      <label class="control-label sr-only" for="postFilter{{::$id}}">Filter by post</label>
+      <input id="postFilter{{::$id}}" placeholder="Post" ng-model="vm.filterPost" type="text">
+    </div>
+    <div class="form-group">
+      <label class="control-label sr-only" for="raceFilter{{::$id}}">Filter by race</label>
+      <input id="raceFilter{{::$id}}" placeholder="Race" ng-model="vm.filterRace" type="text">
+    </div>
+  </form>
 
   <div class="row">
+    <div class="col-xs-12">
+      <table class="table">
+        <caption>Starfleet Crew</caption>
+        <thead>
+          <tr>
+            <th scope="col" ng-click="vm.toggleSort('firstName')">First Name
+              <i class="glyphicon" ng-class="vm.sortTerm === 'firstName' ? vm.sortReverse ? 'glyphicon-arrow-down' : 'glyphicon-arrow-up' : 'glyphicon-sort'"></i>
+            </th>
+            <th scope="col" ng-click="vm.toggleSort('lastName')">Last Name
+              <i class="glyphicon" ng-class="vm.sortTerm === 'lastName' ? vm.sortReverse ? 'glyphicon-arrow-down' : 'glyphicon-arrow-up' : 'glyphicon-sort'"></i>
+            </th>
+            <th scope="col" ng-click="vm.toggleSort('rank')">Rank
+              <i class="glyphicon" ng-class="vm.sortTerm === 'rank' ? vm.sortReverse ? 'glyphicon-arrow-down' : 'glyphicon-arrow-up' : 'glyphicon-sort'"></i>
+            </th>
+            <th scope="col" ng-click="vm.toggleSort('post')">Post
+              <i class="glyphicon" ng-class="vm.sortTerm === 'post' ? vm.sortReverse ? 'glyphicon-arrow-down' : 'glyphicon-arrow-up' : 'glyphicon-sort'"></i>
+            </th>
+            <th scope="col" ng-click="vm.toggleSort('race')">Race
+              <i class="glyphicon" ng-class="vm.sortTerm === 'race' ? vm.sortReverse ? 'glyphicon-arrow-down' : 'glyphicon-arrow-up' : 'glyphicon-sort'"></i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="person in vm.crew | orderBy:vm.sortTerm:vm.sortReverse | filter:vm.filterResults">
+            <td>
+              <a ui-sref="details({ crewId: person.id })">{{person.firstName}}</a>
+            </td>
+            <td>
+              <a ui-sref="details({ crewId: person.id })">{{person.lastName}}</a>
+            </td>
+            <td>
+              <a ui-sref="details({ crewId: person.id })">{{person.rank}}</a>
+            </td>
+            <td>
+              <a ui-sref="details({ crewId: person.id })">{{person.post}}</a>
+            </td>
+            <td>
+              <a ui-sref="details({ crewId: person.id })">{{person.race}}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>
